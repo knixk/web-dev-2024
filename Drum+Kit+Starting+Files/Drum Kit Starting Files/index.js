@@ -7,6 +7,7 @@ for (var i = 0; i < n; i++) {
     this.style.color = "white";
     console.log("clicked");
     whichKey(this.innerHTML);
+    animate(this.innerHTML);
   });
 }
 
@@ -55,4 +56,14 @@ function whichKey(key) {
 document.addEventListener("keydown", (e) => {
   console.log(e.key);
   whichKey(e.key);
+  animate(e.key);
 });
+
+function animate(btn) {
+  const activeBtn = document.querySelector("." + btn);
+
+  activeBtn.classList.add("pressed");
+  setTimeout(() => {
+    activeBtn.classList.remove("pressed");
+  }, 500);
+}
