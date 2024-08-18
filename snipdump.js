@@ -52,7 +52,7 @@ function gamer() {
 
 gamer()
 
-const var = 1;
+const vrr = 1;
 const arr = [];
 const obj = {}
 
@@ -72,7 +72,7 @@ class Gamer {
         return;
     }
 
-    set changeName() {
+    set changeName(id) {
         return;
     }
 }
