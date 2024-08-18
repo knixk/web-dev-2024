@@ -1,3 +1,6 @@
+// dracula dark mode theme is dainty
+
+
 // https://www.appbrewery.co/p/web-development-course-resources
 
 // -- class / constructor
@@ -39,3 +42,46 @@ anotherEventListener("p", (e) => {
     console.log(e, " was clicked")
 })
 
+
+// ------
+
+
+function gamer() {
+    return null;
+}
+
+gamer()
+
+const var = 1;
+const arr = [];
+const obj = {}
+
+const set = new Set(1,2,3,4);
+
+setTimeout(() => {
+
+}, 1000)
+
+class Gamer {
+    constructor() {
+        this.name = null;
+        this.age = null;
+    }
+    
+    get showName() {
+        return;
+    }
+
+    set changeName() {
+        return;
+    }
+}
+
+
+for (let i = 0; i < 100; i++) {
+    console.log('first')
+}
+
+const gamer1 = new Gamer();
+
+// obj.append("asdasd")
