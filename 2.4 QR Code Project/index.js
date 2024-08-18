@@ -28,7 +28,7 @@ inquirer
       if (err) {
         throw err;
       }
-      console.log("the file has een saved");
+      console.log("the file has been saved");
     });
   })
   .catch((error) => {
