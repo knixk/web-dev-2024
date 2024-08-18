@@ -6,7 +6,7 @@
 
 import inquirer from "inquirer";
 import qr from "qr-image";
-import fs from 'fs'
+import fs from "fs";
 
 const questions = [
   {
@@ -23,6 +23,13 @@ inquirer
     qrImg.pipe(fs.createWriteStream("qr_img.png"));
     // Use user feedback for... whatever!!
     console.log(answers);
+
+    fs.writeFile("url.txt", URL, (err) => {
+      if (err) {
+        throw err;
+      }
+      console.log("the file has een saved");
+    });
   })
   .catch((error) => {
     if (error.isTtyError) {
