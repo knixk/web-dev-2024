@@ -1,12 +1,12 @@
 const gamePattern = [];
 const userClickPattern = [];
 let level = 0;
-let gameStarted = false;
+let started = false;
 const buttonColours = ["red", "blue", "green", "yellow"];
 
-$("document").keypress(() => {
+$("body").keypress(() => {
   if (!started) {
-    $("h1").text("Level: " + level);
+    $("h1").text("Level: ");
   }
 
   started = true;
@@ -23,9 +23,11 @@ function nextSequence() {
     .fadeIn(100)
     .fadeOut(100)
     .fadeIn(100);
-
+  
+  gamePattern.push(ans);
   //3. Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.
-  var audio = new Audio("./sounds/" + ans + ".mp3");
+  var audio = new Audio("./sounds/" + id + ".mp3");
+
   // debugger;
   // audio.play();
 }
@@ -43,14 +45,14 @@ $("body").click((e) => {
       .fadeOut(100)
       .fadeIn(100);
 
-    var audio = new Audio("./sounds/" + id + ".mp3");
     // debugger;
-    audio.play();
   }
 });
 
-function playAudio() {
-  return;
+function playAudio(id) {
+  var audio = new Audio("sounds/" + id + ".mp3");
+  audio.play();
+
 }
 
 function animateAction(id) {
